@@ -1,0 +1,127 @@
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Highcharts Example</title>
+
+		<style type="text/css">
+#container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+	margin: 0 auto
+}
+		</style>
+	</head>
+	<body>
+<script src="../../code/highcharts.js"></script>
+<script src="../../code/modules/series-label.js"></script>
+<script src="../../code/modules/exporting.js"></script>
+<script src="../../code/modules/export-data.js"></script>
+
+<div id="container"></div>
+
+
+
+		<script type="text/javascript">
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Men_application information'
+    },
+
+    
+    yAxis: {
+        title: {
+            text: 'Number of People'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            title: {
+            text: 'Number of People'
+        },
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2005
+        }
+    },
+
+    series: [{
+        name: 'fulltime_men_applied',
+        data: [45636,
+    41583,
+    39779,
+    37009,
+    34618,
+    31992,
+    28758,
+    25097,
+    22332,
+    21725,
+    21590,
+    20566,
+    19838,
+    18147]
+    }, {
+        name: 'fulltime_men_admitted',
+        data: [13781,
+13981,
+14103,
+12748,
+11758,
+11866,
+10917,
+8707,
+8365,
+7816,
+8517,
+8419,
+9210,
+7580]
+    }, {
+        name: 'fulltime_men_enrolled',
+        data: [3220,
+2725,
+2669,
+2711,
+2538,
+2616,
+2328,
+1583,
+1858,
+1695,
+1893,
+1838,
+2031,
+1607]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+		</script>
+	</body>
+</html>
